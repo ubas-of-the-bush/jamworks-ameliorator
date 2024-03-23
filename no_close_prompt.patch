@@ -1,0 +1,42 @@
+---
+>     if (production) {
+>         config['maxWidth'] = browserWidth;
+>     }
+90,107c90,107
+<     // browser.on('close', function (e) {
+<     //     if (macOS() && !quitViaShortcut) {
+<     //         e.preventDefault();
+< 
+<     //         browser.hide();
+<     //     } else {
+<     //         const dialogOpts = {
+<     //             type: 'info',
+<     //             buttons: ['Yes', 'Cancel'],
+<     //             detail: 'Are you sure want to exit?'
+<     //         }
+< 
+<     //         if (dialog.showMessageBoxSync(dialogOpts) === 1) {
+<     //             quitViaShortcut = false;
+<     //             e.preventDefault();
+<     //         }
+<     //     }
+<     // });
+---
+>     browser.on('close', function (e) {
+>         if (macOS() && !quitViaShortcut) {
+>             e.preventDefault();
+> 
+>             browser.hide();
+>         } else {
+>             const dialogOpts = {
+>                 type: 'info',
+>                 buttons: ['Yes', 'Cancel'],
+>                 detail: 'Are you sure want to exit?'
+>             }
+> 
+>             if (dialog.showMessageBoxSync(dialogOpts) === 1) {
+>                 quitViaShortcut = false;
+>                 e.preventDefault();
+>             }
+>         }
+>     });

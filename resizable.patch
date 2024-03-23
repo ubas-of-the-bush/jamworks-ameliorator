@@ -1,0 +1,16 @@
+71c71
+<         resizable: production,
+---
+>         resizable: !production,
+80,82c80,82
+<     // if (production) {
+<     //     config['maxWidth'] = browserWidth;
+<     // }
+---
+>     if (production) {
+>         config['maxWidth'] = browserWidth;
+>     }
+233c233
+<     // browser.setMaximumSize(width, height)
+---
+>     browser.setMaximumSize(width, height)
