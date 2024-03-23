@@ -2,6 +2,7 @@
 Marginally improves UX of Jamworks auto-captioning software.
 # How To Use
 !! USE AT YOUR OWN RISK! !!
+
 IT WORKS ON MY MACHINE. IT MAY NOT WORK ON YOURS. MAKE A GODDAMN BACKUP BEFORE YOU START TINKERING WITH FORCES WITH(OUT) YOUR COMPREHENSION.
 
 Use patch or whatever to apply the .patch files - they're generated from running diff on various amendments I made to the index.js
@@ -12,7 +13,9 @@ These were made from a Windows install of Jamworks. I do not own a Macbook, nor 
 
 # Patches
 devtools.patch: enables devtools. Dev tools can be accessed by pressing CTRL-SHIFT-I
+
 resizeable.patch: enables resizing the window.
+
 no_close_prompt.patch: removes the "are you sure" prompt, so pressing the close button actually closes the window.
 
 
